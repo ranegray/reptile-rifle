@@ -1,5 +1,6 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
+import { toast } from "sonner";
 
 export default function LeadForm() {
   const [submitting, setSubmitting] = useState(false);
@@ -27,8 +28,7 @@ export default function LeadForm() {
       body: JSON.stringify(payload),
     });
 
-    // TODO: better UX with shadcn Sonner
-    alert(res.ok ? "Thanks! We'll reach out." : "Something went wrong.");
+    res.ok ? toast.success("Thanks! We'll reach out.") : toast.error("Something went wrong.");
     setSubmitting(false);
     if (res.ok) e.nativeEvent.target.reset();
   }
