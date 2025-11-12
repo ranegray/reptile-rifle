@@ -6,7 +6,7 @@ import ValueStreamToggle from "@/components/value-stream-toggle";
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <header className="p-4 sticky top-0 border-b bg-zinc-50">
+      <header className="p-4 sticky top-0 border-b bg-zinc-50 z-30">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-6">
           <h1 className="text-xl font-bold">GOLEM</h1>
           <MainMenu />
@@ -28,8 +28,7 @@ export default function Home() {
                 dull, dirty, dangerous work with relentless precision and uptime.
               </h2>
             </div>
-            {/* TODO bug image and div are having weird positioning issues with sticky header and mobile menu */}
-            <div className="relative">
+            <div className="relative z-0">
               <p className="absolute bottom-0">
                 Task: Palletizing
               </p>

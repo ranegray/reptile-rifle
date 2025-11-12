@@ -27,12 +27,12 @@ export default function MainMenu() {
       </div>
       <button
         type="button"
-        className="inline-flex items-center rounded-md border border-zinc-200 bg-white px-3 py-2 text-sm font-medium text-zinc-900 shadow-sm transition hover:border-zinc-300 hover:bg-zinc-50 md:hidden"
+        className="inline-flex items-center px-3 py-2 text-sm font-medium text-zinc-900 transition hover:border-zinc-300 hover:bg-zinc-50 md:hidden"
         aria-expanded={open}
         aria-controls="main-menu-drawer"
         onClick={() => setOpen(true)}
       >
-        <Menu className="h-5 w-5" />
+        <Menu className="h-6 w-6" />
         <span className="sr-only">Open navigation</span>
       </button>
       <MobileDrawer open={open} onClose={() => setOpen(false)} />
@@ -101,7 +101,7 @@ function MobileDrawer({ open, onClose }) {
       <div
         role="dialog"
         aria-modal="true"
-        className={`absolute right-0 top-0 flex h-full w-80 flex-col gap-8 rounded-l-2xl bg-white p-6 shadow-2xl transition-transform duration-300 ${
+        className={`absolute right-0 top-0 flex h-full w-80 flex-col gap-8 bg-white p-6 shadow-2xl transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -110,7 +110,7 @@ function MobileDrawer({ open, onClose }) {
           <button
             type="button"
             onClick={onClose}
-            className="rounded-full border border-zinc-200 p-2 text-zinc-700 transition hover:border-zinc-300 hover:bg-zinc-50"
+            className="p-2 text-zinc-700 transition hover:border-zinc-300 hover:bg-zinc-50"
           >
             <X className="h-4 w-4" />
             <span className="sr-only">Close navigation</span>
