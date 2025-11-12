@@ -41,7 +41,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="bg-zinc-100 mt-4 border">
+          <div className="bg-zinc-100 mt-4 border rounded-md p-4">
             <p className="text-lg"><span className="font-bold">Automation without the barriers.</span> Humanoids that drop into existing workcells—PLC-ready, redeployable, built for heavy-duty cycles.</p>
           </div>
         </section>
