@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import MainMenu from "@/components/main-menu";
 import ValueStreamToggle from "@/components/value-stream-toggle";
+import LeadForm from "@/components/lead-form";
 
 export default function Home() {
   return (
@@ -174,6 +175,8 @@ export default function Home() {
         <section id="contact" className="mb-16 p-4 flex flex-col justify-center">
           <h1 className="text-sm">GET IN TOUCH</h1>
           <h2 className="text-2xl font-bold">Join Us in Shaping the Future of Work</h2>
+          <p className="my-4">Interested in learning more about GOLEM humanoids or scheduling a pilot deployment? Reach out to our team to explore how we can help transform your manufacturing operations.</p>
+          <LeadForm />
         </section>
       </main>
       <footer>
