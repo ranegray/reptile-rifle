@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 const links = [
   { href: "#contact", label: "Contact" },
@@ -67,13 +68,12 @@ function CTAButtons({ vertical = false, onNavigate }) {
     <div
       className={`flex gap-3 ${vertical ? "flex-col w-full" : "flex-row"}`}
     >
-      <a
-        href="#get-started"
-        onClick={onNavigate}
+      <Link
+        href="/pilot"
         className="rounded border border-zinc-300 px-4 py-2 text-center text-sm font-semibold text-zinc-700 transition hover:border-zinc-400 hover:text-zinc-900"
       >
-        Get Started
-      </a>
+        Book a pilot
+      </Link>
       <a
         href="#contact"
         onClick={onNavigate}
