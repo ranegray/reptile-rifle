@@ -3,9 +3,11 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import SocialLinks from "@/components/social-links";
 
 const links = [
-  { href: "#contact", label: "Contact" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function MainMenu() {
@@ -22,7 +24,7 @@ export default function MainMenu() {
 
   return (
     <>
-      <div className="hidden w-full items-center justify-between gap-8 md:flex">
+      <div className="hidden items-center gap-8 md:flex">
         <NavLinks />
         <CTAButtons />
       </div>
@@ -44,19 +46,19 @@ export default function MainMenu() {
 function NavLinks({ vertical = false, onNavigate }) {
   const layout = vertical
     ? "flex-col gap-5 text-base"
-    : "flex-row gap-6 text-sm";
+    : "flex-row gap-8 text-xs uppercase tracking-wider";
 
   return (
-    <ul className={`flex ${layout} font-medium text-zinc-700`}>
+    <ul className={`flex ${layout} font-mono font-medium text-zinc-600`}>
       {links.map((link) => (
         <li key={link.href}>
-          <a
+          <Link
             href={link.href}
-            className="transition hover:text-zinc-900"
+            className="transition hover:text-primary"
             onClick={onNavigate}
           >
             {link.label}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>
@@ -66,21 +68,21 @@ function NavLinks({ vertical = false, onNavigate }) {
 function CTAButtons({ vertical = false, onNavigate }) {
   return (
     <div
-      className={`flex gap-3 ${vertical ? "flex-col w-full" : "flex-row"}`}
+      className={`flex gap-3 ${vertical ? "flex-col w-full" : "flex-row items-center"}`}
     >
       <Link
         href="/pilot"
-        className="rounded border border-zinc-300 px-4 py-2 text-center text-sm font-semibold text-zinc-700 transition hover:border-zinc-400 hover:text-zinc-900"
+        className="rounded-lg border border-zinc-200 bg-white px-4 py-2 text-center text-sm font-semibold text-zinc-900 transition hover:border-zinc-300 hover:bg-zinc-50"
       >
         Book a pilot
       </Link>
-      <a
-        href="#contact"
+      <Link
+        href="/contact"
         onClick={onNavigate}
-        className="rounded bg-zinc-900 px-4 py-2 text-center text-sm font-semibold text-white transition hover:bg-zinc-800"
+        className="rounded-lg bg-primary px-4 py-2 text-center text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
       >
-        Talk to Sales
-      </a>
+        Get in touch
+      </Link>
     </div>
   );
 }
@@ -90,7 +92,7 @@ function MobileDrawer({ open, onClose }) {
     <div
       id="main-menu-drawer"
       aria-hidden={!open}
-      className={`fixed inset-0 z-40 transition-[opacity,visibility] duration-300 md:hidden ${
+      className={`fixed inset-0 z-50 transition-[opacity,visibility] duration-300 md:hidden ${
         open ? "visible opacity-100" : "invisible opacity-0"
       }`}
     >
@@ -101,7 +103,7 @@ function MobileDrawer({ open, onClose }) {
       <div
         role="dialog"
         aria-modal="true"
-        className={`absolute right-0 top-0 flex h-full w-80 flex-col gap-8 bg-white p-6 shadow-2xl transition-transform duration-300 ${
+        className={`absolute right-0 top-0 flex h-dvh w-64 max-w-[85vw] flex-col gap-8 bg-white p-6 shadow-2xl transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -118,6 +120,9 @@ function MobileDrawer({ open, onClose }) {
         </div>
         <NavLinks vertical onNavigate={onClose} />
         <CTAButtons vertical onNavigate={onClose} />
+        <div className="mt-auto border-t border-zinc-100 pt-6">
+          <SocialLinks />
+        </div>
       </div>
     </div>
   );
