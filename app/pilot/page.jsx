@@ -23,7 +23,7 @@ export default function Pilot() {
     <div className="flex flex-col">
       {/* HERO */}
       <section className="p-4 my-14 md:max-w-5xl md:mx-auto">
-        <p className="text-sm uppercase text-zinc-500 mb-4">Pilot Program</p>
+        <p className="text-sm font-mono uppercase text-zinc-500 mb-4">Pilot Program</p>
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
           From Handshake to Autonomy in 14 Days.
         </h1>
@@ -56,7 +56,7 @@ export default function Pilot() {
 
       {/* APPLICATION */}
       <section id="contact" className="p-4 w-full md:max-w-5xl md:mx-auto mb-8">
-        <p className="text-sm uppercase text-zinc-500">GET STARTED</p>
+        <p className="text-sm font-mono uppercase text-zinc-500">GET STARTED</p>
         <h2 className="text-3xl font-bold mt-3 mb-4">
           Start your 14-day pilot today.
         </h2>
