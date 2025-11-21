@@ -1,26 +1,7 @@
 import { NextResponse } from 'next/server';
 
-const bucket = global.__leadRL ??= new Map();
-const LIMIT = 5;              // max requests
-const WINDOW_MS = 60_000;     // per 60 seconds
-
-function rateLimited(ip) {
-  const now = Date.now();
-  const k = `lead:${ip}`;
-  const cur = bucket.get(k) ?? { count: 0, ts: now };
-  if (now - cur.ts > WINDOW_MS) { cur.count = 0; cur.ts = now; }
-  cur.count++; bucket.set(k, cur);
-  return cur.count > LIMIT;
-}
-
 export async function POST(req) {
   try {
-    const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || '0.0.0.0';
-    if (rateLimited(ip)) {
-      // soft-fail: look like success to bots, but no email
-      return NextResponse.json({ ok: true }, { status: 200 });
-    }
-
     const body = await req.json();
     const name = String(body?.name || '');
     const email = String(body?.work_email || '');
