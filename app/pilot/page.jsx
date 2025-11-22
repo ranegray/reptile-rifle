@@ -65,7 +65,6 @@ export default function Pilot() {
           report—before you scale.
         </p>
         <div>
-          {/* TODO add props to track from where the lead is coming */}
           <LeadForm />
         </div>
       </section>
