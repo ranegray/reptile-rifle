@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+// TODO: Replace placeholder content with real case study details
 export default function CaseStudy() {
   return (
     <div className="flex flex-col">

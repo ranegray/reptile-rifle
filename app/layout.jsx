@@ -37,16 +37,16 @@ export default function RootLayout({ children }) {
           <header className="sticky top-0 z-30 w-full border-b border-zinc-200">
             <div className="absolute inset-0 -z-10 bg-white/80 backdrop-blur-md" />
             <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4">
-              <Link href="/" className="flex items-center gap-3">
+              <Link href="/" className="flex items-center gap-2">
                 <Image
                   src="/golem-bw-logo.png"
                   alt="GOLEM Logo"
                   width={40}
                   height={40}
-                  className="h-8 w-auto object-contain"
+                  className="w-auto object-contain"
                   priority
                 />
-                <span className="font-mono text-xl font-bold tracking-tight text-zinc-900">
+                <span className="font-mono text-2xl">
                   GOLEM
                 </span>
               </Link>

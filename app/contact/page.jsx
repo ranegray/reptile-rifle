@@ -16,7 +16,7 @@ export default function Contact() {
 
       <section className="bg-zinc-50 border-y border-zinc-200 py-16">
         <div className="mx-auto px-4 md:max-w-5xl w-full grid gap-12 md:grid-cols-2">
-          
+          {/* TODO replace placeholder content with real contact details */}
           {/* Contact Info */}
           <div className="flex flex-col gap-8">
             <div>
@@ -76,6 +76,7 @@ export default function Contact() {
               <p className="text-zinc-600 mb-6 text-sm">
                 Fill out the form below and we&apos;ll get back to you within 24 hours.
               </p>
+              {/* TODO tailor form fields for specific inquiry types */}
               <LeadForm />
             </div>
           </div>
