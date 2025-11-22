@@ -30,13 +30,27 @@ export async function POST(req) {
         from: `GOLEM <rane@${process.env.MAIL_DOMAIN || 'example.com'}>`,
         to: [process.env.SALES_EMAIL],
         subject: `New Pilot Inquiry — ${company}`,
-        // TODO cleanup and style this email
+        // TODO: refactor to use a proper templating system
         html: `
-          <h3>New Pilot Inquiry</h3>
-          <p><b>${escapeHtml(name)}</b> (${escapeHtml(email)}) — ${escapeHtml(company)}</p>
-          <p><b>Message:</b><br/>${escapeHtml(message)}</p>
-          <hr/>
-          <p><small>TTF: ${ttf || 0}s · IP: ${ip}</small></p>
+          <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f9fafb;padding:24px;">
+            <div style="max-width:520px;margin:0 auto;background:#ffffff;border:1px solid #e5e7eb;border-radius:12px;padding:24px;">
+              <h2 style="margin:0 0 12px;font-size:20px;color:#111827;">New Pilot Inquiry</h2>
+              <p style="margin:0 0 20px;color:#4b5563;">${escapeHtml(name)} from ${escapeHtml(company)} submitted the pilot form.</p>
+              <table style="width:100%;border-collapse:collapse;font-size:14px;color:#111827;">
+                <tbody>
+                  ${formatRow('Name', name)}
+                  ${formatRow('Email', email)}
+                  ${formatRow('Company', company)}
+                </tbody>
+              </table>
+              <div style="margin-top:20px;">
+                <p style="margin:0 0 8px;font-weight:600;color:#111827;">Message</p>
+                <div style="padding:12px;border:1px solid #e5e7eb;border-radius:8px;color:#374151;line-height:1.5;">
+                  ${formatMessage(message)}
+                </div>
+              </div>
+            </div>
+          </div>
         `
       });
     }
@@ -49,4 +63,18 @@ export async function POST(req) {
 
 function escapeHtml(s) {
   return s.replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+}
+
+function formatRow(label, value) {
+  return `
+    <tr>
+      <td style="padding:6px 0;width:90px;color:#6b7280;font-weight:600;">${escapeHtml(label)}</td>
+      <td style="padding:6px 0;color:#111827;">${escapeHtml(String(value || '—'))}</td>
+    </tr>
+  `;
+}
+
+function formatMessage(value) {
+  const safe = escapeHtml(String(value || 'No message provided').trim() || 'No message provided');
+  return safe.replace(/\n/g, '<br/>');
 }
