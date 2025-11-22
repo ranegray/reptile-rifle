@@ -1,3 +1,4 @@
+// TODO : Review and update the privacy policy content
 export default function PrivacyPolicy() {
   return (
     <div className="max-w-3xl mx-auto py-16 px-4">
