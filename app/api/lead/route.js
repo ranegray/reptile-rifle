@@ -40,6 +40,17 @@ export async function POST(req) {
       return NextResponse.json({ ok: true }, { status: 200 }); // too fast → likely bot
     }
 
+    // TODO create/update contact in Resend
+    // const resend = new Resend('re_xxxxxxxxx');
+
+    // const { data, error } = await resend.contacts.create({
+    //   email: 'steve.wozniak@gmail.com',
+    //   firstName: 'Steve',
+    //   lastName: 'Wozniak',
+    //   unsubscribed: false,
+    //   audienceId: '78261eea-8f8b-4381-83c6-79fa7120f1cf',
+    // });
+
     // --- deliver email (Resend) ---
     if (process.env.RESEND_API_KEY && process.env.SALES_EMAIL) {
       const { Resend } = await import("resend");
