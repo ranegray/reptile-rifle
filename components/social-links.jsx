@@ -14,7 +14,7 @@ export default function SocialLinks({ className = "" }) {
         <Linkedin className="h-5 w-5" />
       </Link>
       <Link
-        href="https://x.com/GolemRobotics"
+        href="https://x.com/golemrobotics"
         target="_blank"
         rel="noopener noreferrer"
         className="text-zinc-600 transition hover:text-primary"
@@ -25,7 +25,7 @@ export default function SocialLinks({ className = "" }) {
       {/* TODO add github link to https://github.com/correlllab/ */}
       <Link
         // TODO update email address
-        href="mailto:hello@golem.robotics"
+        href="mailto:hello@golemrobot.com"
         className="text-zinc-600 transition hover:text-primary"
         aria-label="Email Us"
       >
