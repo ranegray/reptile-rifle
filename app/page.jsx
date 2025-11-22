@@ -1,7 +1,19 @@
-import Image from "next/image";
 import Link from "next/link";
 import ValueStreamToggle from "@/components/value-stream-toggle";
 import LeadForm from "@/components/lead-form";
+
+// TODO verify these specs
+const specs = {
+  SPEC_PAYLOAD_KG: 10,
+  SPEC_RUNTIME_HR: 8,
+  SPEC_MIN_AISLE_MM: 900,
+  SPEC_TURNING_RADIUS_MM: 600,
+  SPEC_IP_RATING: "IP54",
+  SPEC_WALK_SPEED_MPS: 1.0,
+  SPEC_SLOPE_DEG: 5,
+  SPEC_STEP_HEIGHT_MM: 50,
+  SPEC_REPEATABILITY_MM: 2,
+};
 
 export default function Home() {
   return (
@@ -157,36 +169,34 @@ export default function Home() {
                 <td className="px-6 py-4 font-semibold text-zinc-900">
                   Payload
                 </td>
-                <td className="px-6 py-4 font-mono text-sm">SPEC_PAYLOAD_KG kg</td>
+                <td className="px-6 py-4 font-mono text-sm">{specs.SPEC_PAYLOAD_KG} kg</td>
               </tr>
               <tr className="hover:bg-zinc-50/50 transition-colors">
                 <td className="px-6 py-4 font-semibold text-zinc-900">
                   Runtime
                 </td>
-                <td className="px-6 py-4 font-mono text-sm">SPEC_RUNTIME_HR hr (hot-swap)</td>
+                <td className="px-6 py-4 font-mono text-sm">{specs.SPEC_RUNTIME_HR} hr (hot-swap)</td>
               </tr>
               <tr className="hover:bg-zinc-50/50 transition-colors">
                 <td className="px-6 py-4 font-semibold text-zinc-900">
                   Footprint / Aisles
                 </td>
                 <td className="px-6 py-4 font-mono text-sm">
-                  Works in SPEC_MIN_AISLE_MM mm aisles; turning radius
-                  SPEC_TURNING_RADIUS_MM mm
+                  Works in {specs.SPEC_MIN_AISLE_MM} mm aisles; turning radius {specs.SPEC_TURNING_RADIUS_MM} mm
                 </td>
               </tr>
               <tr className="hover:bg-zinc-50/50 transition-colors">
                 <td className="px-6 py-4 font-semibold text-zinc-900">
                   Ingress Protection
                 </td>
-                <td className="px-6 py-4 font-mono text-sm">SPEC_IP_RATING</td>
+                <td className="px-6 py-4 font-mono text-sm">{specs.SPEC_IP_RATING}</td>
               </tr>
               <tr className="hover:bg-zinc-50/50 transition-colors">
                 <td className="px-6 py-4 font-semibold text-zinc-900">
                   Mobility
                 </td>
                 <td className="px-6 py-4 font-mono text-sm">
-                  Up to SPEC_WALK_SPEED_MPS m/s; rated SPEC_SLOPE_DEG° slope;
-                  SPEC_STEP_HEIGHT_MM mm step
+                  Up to {specs.SPEC_WALK_SPEED_MPS} m/s; rated {specs.SPEC_SLOPE_DEG}° slope; {specs.SPEC_STEP_HEIGHT_MM} mm step
                 </td>
               </tr>
               <tr className="hover:bg-zinc-50/50 transition-colors">
@@ -194,7 +204,7 @@ export default function Home() {
                   Precision
                 </td>
                 <td className="px-6 py-4 font-mono text-sm">
-                  Repeatability ±SPEC_REPEATABILITY_MM mm
+                  Repeatability ±{specs.SPEC_REPEATABILITY_MM} mm
                 </td>
               </tr>
             </tbody>
