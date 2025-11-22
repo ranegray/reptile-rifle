@@ -44,11 +44,11 @@ export default function Home() {
             </video>
           </div>
         </div>
-        <div className="mt-12 bg-zinc-50 border-l-4 border-primary p-6 rounded-r-lg shadow-sm">
+        <div className="bg-white mt-12 border border-zinc-200 p-6 rounded-xl shadow-sm">
           <p className="text-lg text-zinc-800">
-            <span className="font-bold block mb-1">
+            <span className="font-bold text-zinc-900">
               Start in factories, aim for the world.
-            </span>
+            </span>{" "}
             We drop humanoids into real workcells—PLC-ready, safety-aware, and
             designed to improve through every shift they run.
           </p>
