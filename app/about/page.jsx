@@ -36,6 +36,7 @@ export default function About() {
               <div>
                 <h3 className="text-xl font-bold">Dr. Nikolaus Correll</h3>
                 <p className="text-sm font-mono text-primary uppercase mb-2">CEO & Co-Founder</p>
+                {/* TODO approve bio w correll */}
                 <p className="text-zinc-600">
                   Robotics expert with 15+ years designing complex mechatronic systems for real-world deployment. Focused on closing the loop between sensing, computation, and actuation to enable next-gen autonomy.
                 </p>
@@ -55,6 +56,7 @@ export default function About() {
               <div>
                 <h3 className="text-xl font-bold">Max Conway</h3>
                 <p className="text-sm font-mono text-primary uppercase mb-2">CTO & Co-Founder</p>
+                {/* TODO approve bio w max */}
                 <p className="text-zinc-600">
                   Spearheading technical strategy and autonomy. PhD researcher at CU Boulder specializing in open-world robotics, with a focus on robust perception and manipulation in unstructured environments.
                 </p>
