@@ -1,4 +1,9 @@
 // TODO : Review and update the terms of service content
+export const metadata = {
+  title: "Terms of Service | GOLEM",
+  description: "Terms of Service for GOLEM.",
+};
+
 export default function TermsOfService() {
   return (
     <div className="max-w-3xl mx-auto py-16 px-4">

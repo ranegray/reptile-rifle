@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "Case Study: EV Battery Recycling | GOLEM",
+  description: "Automating the hazardous teardown of EV battery packs with GOLEM humanoids.",
+};
+
 // TODO: Replace placeholder content with real case study details
 export default function CaseStudy() {
   return (

@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { ShieldCheck, Eye, Lock, FileCheck } from "lucide-react";
 
+export const metadata = {
+  title: "Safety & Specifications | GOLEM",
+  description: "Safety is not a feature, it's the foundation. Explore GOLEM's safety architecture and technical specifications.",
+};
+
 export default function SafetySpecs() {
   return (
     <div className="flex flex-col">

@@ -1,5 +1,10 @@
 import Image from "next/image";
 
+export const metadata = {
+  title: "About Us | GOLEM",
+  description: "Developing the first humanoids made for the factory floor. Meet the team behind GOLEM.",
+};
+
 export default function About() {
   return (
     <div className="flex flex-col">

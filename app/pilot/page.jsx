@@ -1,5 +1,10 @@
 import LeadForm from "@/components/lead-form";
 
+export const metadata = {
+  title: "Pilot Program | GOLEM",
+  description: "Validate GOLEM in your facility with a fixed-scope, fixed-cost Pilot Program. From handshake to autonomy in 14 days.",
+};
+
 const steps = [
   {
     phase: "PHASE 01",

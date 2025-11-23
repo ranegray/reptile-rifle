@@ -24,7 +24,7 @@ const spaceMono = Space_Mono({
 
 export const metadata = {
   title: "GOLEM",
-  description: "Humanoids Built for Real Manufacturing",
+  description: "Humanoids engineered for industrial deployment with intelligent and predictable behavior.",
 };
 
 export default function RootLayout({ children }) {

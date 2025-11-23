@@ -1,6 +1,11 @@
 import LeadForm from "@/components/lead-form";
 import { Mail, MapPin, Phone } from "lucide-react";
 
+export const metadata = {
+  title: "Contact Us | GOLEM",
+  description: "Get in touch with GOLEM. Whether you're ready to deploy or just have questions, we're here to help.",
+};
+
 export default function Contact() {
   return (
     <div className="flex flex-col">
@@ -29,7 +34,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-zinc-900">Email</h3>
                     <p className="text-zinc-600 mb-1">For general inquiries and sales.</p>
-                    <a href="mailto:hello@golem.robotics" className="text-primary hover:underline">hello@golem.robotics</a>
+                    <a href="mailto:hello@golemrobot.com" className="text-primary hover:underline">hello@golemrobot.com</a>
                   </div>
                 </div>
 

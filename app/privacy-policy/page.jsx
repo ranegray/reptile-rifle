@@ -1,4 +1,9 @@
 // TODO : Review and update the privacy policy content
+export const metadata = {
+  title: "Privacy Policy | GOLEM",
+  description: "Privacy Policy for GOLEM.",
+};
+
 export default function PrivacyPolicy() {
   return (
     <div className="max-w-3xl mx-auto py-16 px-4">
@@ -34,7 +39,7 @@ export default function PrivacyPolicy() {
 
         <h2 className="text-xl font-bold mt-8 mb-4">5. Contact Us</h2>
         <p className="mb-4">
-          If you have any questions about this Privacy Policy, please contact us at legal@golem.robotics.
+          If you have any questions about this Privacy Policy, please contact us at legal@golemrobot.com.
         </p>
       </div>
     </div>
