@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Linkedin, Mail, Twitter } from "lucide-react";
 
+// TODO change deprecated app icons to official brand icons
+
 export default function SocialLinks({ className = "" }) {
   return (
     <div className={`flex items-center gap-4 ${className}`}>
