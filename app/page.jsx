@@ -3,6 +3,8 @@ import ValueStreamToggle from "@/components/value-stream-toggle";
 import LeadForm from "@/components/lead-form";
 
 // TODO verify these specs
+// Found specs here, there are some points that we dont have the data for
+// https://www.robotshop.com/products/unitree-h1-2-humanoid-robot-us
 const specs = {
   SPEC_PAYLOAD_KG: 10,
   SPEC_RUNTIME_HR: 8,
@@ -32,8 +34,8 @@ export default function Home() {
               GOLEM deploys humanoid robots into existing manufacturing lines—starting with structured industrial tasks so they can safely learn the skills tomorrow&apos;s workforce will need.
             </h2>
             <div className="mt-8">
-              <Link 
-                href="/pilot" 
+              <Link
+                href="/pilot"
                 className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors"
               >
                 Book a pilot
@@ -240,7 +242,7 @@ export default function Home() {
               </li>
             </ul>
             <div className="flex gap-4 items-center">
-              <Link 
+              <Link
                 href="/case-study"
                 className="px-5 py-2.5 bg-white text-zinc-900 rounded-lg font-semibold hover:bg-zinc-100 transition-colors"
               >

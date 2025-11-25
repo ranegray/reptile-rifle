@@ -6,6 +6,8 @@ export const metadata = {
 };
 
 // TODO: Replace placeholder content with real case study details
+// with the details we have sofar this is great
+
 export default function CaseStudy() {
   return (
     <div className="flex flex-col">
@@ -81,7 +83,7 @@ export default function CaseStudy() {
               <p className="text-lg text-zinc-600">
                 GOLEM deployed a fleet of humanoid robots equipped with multi-modal perception and force-aware manipulation to handle the disassembly process.
               </p>
-              
+
               <div className="grid gap-6 md:grid-cols-2">
                 <div className="bg-white p-6 rounded-lg border border-zinc-200 shadow-sm">
                   <h3 className="font-bold text-zinc-900 mb-2">Adaptive Perception</h3>
