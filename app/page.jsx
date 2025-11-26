@@ -11,7 +11,7 @@ const specs = {
   SPEC_MIN_AISLE_MM: 900,
   SPEC_TURNING_RADIUS_MM: 600,
   SPEC_IP_RATING: "IP54",
-  SPEC_WALK_SPEED_MPS: 1.0,
+  SPEC_WALK_SPEED_MPS: 1.5,
   SPEC_SLOPE_DEG: 5,
   SPEC_STEP_HEIGHT_MM: 50,
   SPEC_REPEATABILITY_MM: 2,
@@ -19,7 +19,7 @@ const specs = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col items-center">
       {/* HERO */}
       <section
         id="hero"
@@ -143,7 +143,7 @@ export default function Home() {
       {/* SPECIFICATIONS */}
       <section
         id="specs"
-        className="py-16 px-4 flex flex-col md:max-w-5xl md:mx-auto"
+        className="py-16 px-4 flex flex-col w-full md:max-w-5xl"
       >
         <p className="text-sm font-mono text-primary uppercase tracking-wider mb-2">SPECIFICATIONS</p>
         <h2 className="text-3xl font-bold text-zinc-900">

@@ -17,13 +17,13 @@ export default function Error({ error, reset }) {
       <div className="flex flex-col gap-4 sm:flex-row">
         <button
           onClick={() => reset()}
-          className="rounded-lg bg-zinc-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-zinc-800"
+          className="rounded-lg bg-zinc-900 px-6 py-3 text-sm font-semibold text-white transition cursor-pointer hover:bg-zinc-800"
         >
           Try Again
         </button>
         <Link
           href="/"
-          className="rounded-lg border border-zinc-200 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 transition hover:bg-zinc-50"
+          className="rounded-lg border border-zinc-200 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 transition cursor-pointer hover:bg-zinc-50"
         >
           Return Home
         </Link>
