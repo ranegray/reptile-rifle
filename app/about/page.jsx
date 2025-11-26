@@ -26,7 +26,7 @@ export default function About() {
       <section className="bg-zinc-50 border-y border-zinc-200 py-16">
         <div className="mx-auto px-4 md:max-w-5xl w-full">
           <h2 className="text-2xl font-bold mb-12">Meet the Team</h2>
-          
+
           <div className="grid gap-8 md:grid-cols-2">
             {/* CEO */}
             <div className="flex flex-col gap-4">
@@ -61,7 +61,6 @@ export default function About() {
               <div>
                 <h3 className="text-xl font-bold">Max Conway</h3>
                 <p className="text-sm font-mono text-primary uppercase mb-2">CTO & Co-Founder</p>
-                {/* TODO approve bio w max */}
                 <p className="text-zinc-600">
                   Spearheading technical strategy and autonomy. PhD researcher at CU Boulder specializing in open-world robotics, with a focus on robust perception and manipulation in unstructured environments.
                 </p>
