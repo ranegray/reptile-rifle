@@ -33,7 +33,7 @@ export default function About() {
               <div className="relative w-full h-128 overflow-hidden rounded-lg bg-zinc-200">
                 <Image
                   src="/nikolaus-correll-profile.png"
-                  alt="CEO"
+                  alt="Dr. Nikolaus Correll, CEO & Co-Founder"
                   fill
                   className="object-cover"
                 />
@@ -53,7 +53,7 @@ export default function About() {
               <div className="relative w-full h-128 overflow-hidden rounded-lg bg-zinc-200">
                 <Image
                   src="/max-conway-profile.png"
-                  alt="CTO"
+                  alt="Max Conway, CTO & Co-Founder"
                   fill
                   className="object-cover"
                 />
